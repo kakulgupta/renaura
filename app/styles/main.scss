@@ -8,45 +8,162 @@
 }
 body {
   font-family: 'SourceSansPro-Light';
-  margin: 0;
-  background: url('../images/background.jpg') center center no-repeat fixed;
 }
-.container {
+div,
+span {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+}
+.spaced-letters {
+  letter-spacing: 10px;
+}
+.font-red {
+  color: #C7567E;
+}
+.width-25 {
+  width: 25%;
+}
+.width-30 {
+  width: 30%;
+}
+.width-50 {
+  width: 50%;
+}
+.width-70 {
+  width: 70%;
+}
+.width-75 {
+  width: 75%;
+}
+.padding-40 {
+  padding: 0 40px;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.align-center {
+  text-align: center;
+}
+.clearfix:after {
+  clear: both;
+  display: table;
+  content: "";
+}
+.navigation {
+  position: fixed;
   height: 100vh;
   color: #ffffff;
-  text-align: center;
-  .nature-science {
-    letter-spacing: 3px;
+  background: #000000;
+}
+.information-section {
+  // margin-left: 25%;
+  .section {
+    padding: 70px;
+    .section-img {
+      background: url("../images/renaura_1.jpg") center center no-repeat;
+      background-size: contain;
+      height: 250px;
+    }
+    .section-img1 {
+      @extend .section-img;
+    }
+    .section-img2 {
+      @extend .section-img;
+      background-image: url("../images/renaura_2.png");
+    }
+    .section-img3 {
+      height: 150px;
+      background: url("../images/renaura_3.png") left top no-repeat;
+      background-size: contain;
+    }
+    .section-img4 {
+      height: 150px;
+      background: url("../images/renaura_4.png") left top no-repeat;
+      background-size: contain;
+    }
+    .section-img5 {
+      height: 150px;
+      background: url("../images/renaura_5.svg") left top no-repeat;
+      background-size: contain;
+    }
+    .section-img6 {
+      height: 150px;
+      background: url("../images/renaura_6.svg") left top no-repeat;
+      background-size: contain;
+    }
+    .section-img7 {
+      @extend .section-img;
+      height: 150px;
+      background-image: url("../images/renaura_7.png");
+    }
+    .section-img8 {
+      @extend .section-img;
+      height: 150px;
+      background-image: url("../images/renaura_8.png");
+    }
+    .contact-img {
+      background: url("../images/renaura_9.png") center center no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 150px;
+    }
+    .email-us {
+      background-image: url("../images/renaura_10.png");
+    }
   }
-  .logo {
+  .section:nth-child(2n) {
+    background-color: #EEEEEE;
+  }
+}
+.section-logo {
+  background: url('../images/renaura_11.jpg') center center;
+  color: #ffffff;
+  .renaura-logo {
     background: url("../images/logo-white.png") center center no-repeat;
     background-size: contain;
     width: 100%;
     height: 45vh;
   }
-  .under-construction {
-    padding-top: 30px;
-    font-size: 5vh;
-    text-transform: uppercase;
+}
+@media only screen and (max-width: 800px) {
+  .navigation {
+    display: none;
   }
-  .contact-us {
-    font-size: 2.5vh;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 10px 10px 20px;
-    .connect {
-      padding: 20px 0;
-      font-size: 4vh;
-    }
-    .contact-type {
-      width: 50%;
-      float: left;
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-    }
+  .information-section .section{
+    padding: 20px;
+  }
+  .width-30,
+  .width-50,
+  .width-70,
+  .width-25,
+  .width-75 {
+    width: 100%;
+  }
+  .padding-40 {
+    padding: 0 20px;
+  }
+  .information-section {
+    margin: 0;
+  }
+  .information-section .section .email-us{
+    margin-top: 20px;
+  }
+}
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+  /* So they look staggered */
+}
+@keyframes come-in {
+  to {
+    transform: translateY(0);
   }
 }
