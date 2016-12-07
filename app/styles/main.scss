@@ -118,6 +118,9 @@ a {
     .email-us {
       background-image: url("../images/renaura_10.png");
     }
+    .corporate-office {
+      background-image: url("../images/renaura_12.jpg");
+    }
   }
   .section:nth-child(2n) {
     background-color: #EEEEEE;
@@ -135,7 +138,6 @@ a {
 }
 .footer {
   padding: 70px;
-  background-color: #EEEEEE;
   div {
     padding: 10px;
   }
@@ -161,7 +163,7 @@ a {
   .information-section {
     margin: 0;
   }
-  .information-section .section .email-us{
+  .information-section .section .email-us, .information-section .section .corporate-office{
     margin-top: 20px;
   }
 }
